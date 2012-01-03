@@ -1,0 +1,60 @@
+<html>
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<style type="text/css">
+.bigButton {
+    -webkit-border-image: url(themes/one/img/bigButton.png) 0 12 0 12;
+    border-width: 0 12px;
+    color: #000000;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 46px;
+    text-align: center;
+    text-decoration: inherit;
+    text-shadow: rgba(255,255,255,.8) 0 1px 0;
+	background-color: transparent;
+}
+.bigButton.active {
+    -webkit-border-image: url(themes/one/img/bigButtonActive.png) 0 12 0 12;
+    color: #000000;
+	background-color: transparent;
+}
+</style>
+<script type="text/javascript">
+function input()
+{
+var input=prompt("Please input your location","");
+jQuery(document).ready(function($) {
+	$.ajax({
+		url: "http://api.wunderground.com/api/ba2ef75c341eb4f6/geolookup/conditions/q/"+input+".json",
+		dataType: "jsonp",
+		success: function(parsed_json) {
+			var location = parsed_json['location']['city'];
+			var temp_c = parsed_json['current_observation']['temp_c'];
+			var temp_f = parsed_json['current_observation']['temp_f'];
+			var weather = parsed_json['current_observation']['weather'];
+			var icon= parsed_json['current_observation']['icon'];
+			var humidity= parsed_json['current_observation']['relative_humidity'];
+			var precip= parsed_json['current_observation']['precip_today_metric'];
+			var wind= parsed_json['current_observation']['wind_string'];
+			document.write("<div align=\"center\"><table>");
+			document.write("<tr><td>Location:</td><td>"+location+"</td></tr>");
+			document.write("<tr><td>Current temperature:</td><td>" + temp_c + "&deg;C / " + temp_f + "&deg;F</td></tr>");
+			document.write("<tr><td>Weather:</td><td style=\"background: url(http://icons.wxug.com/i/c/i/" +icon+ ".gif) no-repeat; height: 50px; padding-left: 55px; padding-top: 10px;\">" + weather + "</td></tr>");
+			document.write("<tr><td>Relative humidity:</td><td>" + humidity + "</td></tr>");
+			document.write("<tr><td>Precipitation:</td><td>" + precip+ "mm</td></tr>");
+			document.write("</table></div>");
+		}
+	});
+});
+}
+</script>
+<body>
+
+<div align="center">
+<p id="text"></p>
+<input type="button" style="margin-left: auto; margin-right: auto; width: 14em;" class="bigButton" onclick="input()" value="Input Your Location" />
+
+</body>
+</html>

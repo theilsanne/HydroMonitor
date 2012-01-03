@@ -19,18 +19,6 @@ body {
 	-webkit-border-radius: 8px;
     -webkit-box-shadow: rgba(0,0,0,.3) 1px 1px 1px;
 }
-#jqt #home {
-	background: url(themes/one/img/splashpage.png) no-repeat;
-	background-size: 320px 460px;
-}
-#jqt #home textarea {
-	background: none;
-	border: none;
-	display: none;
-}
-p {
-	margin-bottom: 16px;
-}
 a {
 	color: #300500;
 	border: 0;
@@ -39,14 +27,7 @@ a {
 a:active {
 	color: #b08580;
 }
-#jqt #home .nav {
-	position: fixed;
-	top: 230px;
-	left: 150px;
-	width: 140px;
-	height: 280px;
-}
-#jqt #status .chart {
+#jqt #home .chart {
 	width: 100%;
 	height: 285px;
 	overflow: scroll;
@@ -133,6 +114,7 @@ a:active {
     max-width: 55px;
     border-width: 0 8px 0 14px;
     -webkit-border-image: url(themes/one/img/backButton.png) 0 8 0 14;
+	display: block;
 }
 #jqt .back.active {
     -webkit-border-image: url(themes/one/img/backButtonActive.png) 0 8 0 14;
@@ -146,7 +128,7 @@ a:active {
     line-height: 24px;
     font-weight: bold;
 }
-#jqt .bigButton {
+.bigButton {
     -webkit-border-image: url(themes/one/img/bigButton.png) 0 12 0 12;
     border-width: 0 12px;
     color: #000000;
@@ -159,7 +141,7 @@ a:active {
     text-shadow: rgba(255,255,255,.8) 0 1px 0;
 	background-color: transparent;
 }
-#jqt .bigButton.active {
+.bigButton.active {
     -webkit-border-image: url(themes/one/img/bigButtonActive.png) 0 12 0 12;
     color: #000000;
 	background-color: transparent;
@@ -460,148 +442,7 @@ a:active {
     text-shadow: rgba(255,255,255,.8) 0 1px 0;
 }
 /* @end */
-/* @group Edge to edge */
-#jqt ul.edgetoedge {
-    border-width: 1px 0;
-    margin: 0;
-    padding: 0;
-}
-#jqt ul.edgetoedge li {
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1e1f21), to(#272729));
-    border-bottom: 2px solid #000;
-    border-top: 1px solid #4a4b4d;
-    font-size: 20px;
-    margin-bottom: -1px;
-}
-#jqt ul.edgetoedge li.arrow {
-    background-color: #404142 !important;
-    background-image: url(themes/one/img/chevron.png), -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1e1f21), to(#272729));
-    background-position: right center;
-    background-repeat: no-repeat;
-}
-#jqt ul.edgetoedge li.sep {
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0,0,0,0)), to(rgba(0,0,0,.5)));
-    border-bottom: 1px solid #111113;
-    border-top: 1px solid #666;
-    color: #3e9ac3;
-    font-size: 16px;
-    margin: 1px 0 0 0;
-    padding: 2px 10px;
-    text-shadow: #000 0 1px 0;
-}
-#jqt ul.edgetoedge li em {
-    font-weight: normal;
-    font-style: normal;
-}
-/* @end */
-/* @group Plastic */
-#jqt #plastic {
-    background: #17181a;
-}
-#jqt ul.plastic {
-    background: #17181a;
-    color: #aaa;
-    font: bold 18px "Helvetica Neue", Helvetica;
-    margin: 0;
-    padding: 0;
-    border-width: 0 0 1px 0;
-}
-#jqt ul.plastic li {
-    border-width: 1px 0;
-    border-style: solid;
-    border-top-color: #222;
-    border-bottom-color: #000;
-    color: #666;
-    list-style-type: none;
-    overflow: hidden;
-    padding: 10px 10px 10px 10px;
-}
-#jqt ul.plastic li a.active.loading {
-    background-image: url(img/loading.gif);
-    background-position: 95% center;
-    background-repeat: no-repeat;
-}
-#jqt ul.plastic li small {
-    color: #888;
-    font-size: 13px;
-    font-weight: bold;
-    line-height: 24px;
-    text-transform: uppercase;
-}
-#jqt ul.plastic li:nth-child(odd) {
-    background-color: #1c1c1f;
-}
-#jqt ul.plastic li.arrow {
-    background-image: url(themes/one/img/chevron.png);
-    background-position: right center;
-    background-repeat: no-repeat;
-}
-#jqt ul.plastic li.arrow a.active {
-    background-image: url(themes/one/img/chevron.png);
-    background-position: right center;
-    background-repeat: no-repeat;
-}
-#jqt ul.plastic li.forward {
-    background-image: url(themes/one/img/chevronCircle.png);
-    background-position: right center;
-    background-repeat: no-repeat;
-}
-#jqt ul.plastic li.forward a.active {
-    background-image: url(themes/one/img/chevronCircle.png);
-    background-position: right center;
-    background-repeat: no-repeat;
-}
-/* @group Metal */
-#jqt ul.metal {
-    border-bottom: 0;
-    border-left: 0;
-    border-right: 0;
-    border-top: 0;
-    margin: 0;
-}
-#jqt ul.metal li {
-    background-image: none;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #666;
-    font-size: 26px;
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(238,238,238,1)), to(rgba(156,158,160,1)));
-}
-#jqt ul.metal li a {
-    line-height: 26px;
-    margin: 0;
-    text-shadow: #fff 0 1px 0;
-    padding: 13px 0;
-}
-#jqt ul.metal li a em {
-    display: block;
-    font-size: 14px;
-    font-style: normal;
-    color: #444;
-    width: 50%;
-    line-height: 14px;
-}
-#jqt ul.metal li a.active {
-    color: rgb(0,0,0);
-}
-#jqt ul.metal li small {
-    float: right;
-    position: relative;
-    margin-top: 10px;
-    font-weight: bold;
-}
-#jqt ul.metal li.arrow {
-    background-image: url(themes/one/img/chevron.png);
-    background-position: right center;
-    background-repeat: no-repeat;
-    background-image: url(themes/one/img/chevron.png), -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(238,238,238,1)), to(rgba(156,158,160,1)));
-    background-repeat: no-repeat;
-    background-position: right center;
-}
-#jqt ul.metal li.arrow a small {
-    padding-right: 15px;
-    line-height: 17px;
-}
-/* @end */
+
 input[type='submit'] {
     -webkit-border-radius: 4px;
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(238,238,238,1)), to(rgba(156,158,160,1)));

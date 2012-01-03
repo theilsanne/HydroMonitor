@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <meta charset="UTF-8" />
+<!--
+        <script src="http://jsconsole.com/remote.js?"></script>
+        <script src="http://192.168.1.2:8080/target/target-script-min.js"></script>
+-->
+        <title>HydroMon &beta;</title>
+        <style type="text/css" media="screen">@import "jqtouch/jqtouch.css";</style>
+        <style type="text/css" media="screen">@import "status.css";</style>
+		<style type="text/css" media="screen">@import "extensions/jqt.listIndex/jqt.listIndex.css";</style>
+        <script src="jqtouch/jquery-1.4.2.js" type="text/javascript" charset="utf-8"></script>
+        <script src="jqtouch/jqtouch.js" type="application/x-javascript" charset="utf-8"></script>
+		<script src="extensions/jqt.autotitles.js" type="application/x-javascript" charset="utf-8"></script>
+		<script src="extensions/jqt.listIndex/jqt.listIndex.js" type="application/x-javascript" charset="utf-8"></script>
+		<script src="checknetwork.js" type="application/x-javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+            var jQT = new $.jQTouch({
+                icon: 'themes/one/img/hydromon-icon.png',
+                icon4: 'themes/one/img/hydromon-icon.png',
+                addGlossToIcon: false,
+				fullScreen: true,
+                startupScreen: 'themes/one/img/hydromon-startup.png',
+                statusBar: 'black',
+                preloadImages: [
+                    'themes/one/img/backButton.png',
+                    'themes/one/img/backButtonActive.png',
+                    'themes/one/img/bigButton.png',
+                    'themes/one/img/bigButtonActive.png',
+                    'themes/one/img/button.png',
+                    'themes/one/img/buttonActive.png',
+                    'themes/one/img/chevron.png',
+                    'themes/one/img/chevronActive.png',
+                    'themes/one/img/chevronCircle.png',
+                    'themes/one/img/chevronCircleActive.png',
+                    'themes/one/img/toggleSwitch.png'
+                    ]
+            });
+		</script>
+		
+		<script type="text/javascript" src="scrolltopcontrol.js"></script>
+		
+<style type="text/css" media="all">
+#content {
+	background: none;
+	padding: 10px;
+}
+</style>
+
+    </head>
+    <body>
+
+<div id="jqt">
+			<div id="home">
+			<div class="toolbar">
+				<h1>Status</h1>
+                		<a class="back" href="javascript:history.go(-2)">Back</a>
+			</div>
+			<div id="content">
+			<h1>Today</h1>
+			<div class="chart"><img src="sghmps1.jpg" /></div>
+			<p><div align="center"><sub>Scroll to the left to view the whole graph</sub></div></p>
+			<p>&nbsp;</p>
+			<p><strong>Date & Time:</strong> 
+			<script type="text/javascript">
+			<!-- 
+			var d=new Date();
+			document.write(d);
+			//-->
+			</script>
+			</p>
+				<h2>Load Percentage of Rated</h2>
+					<table>	
+					<script language="javascript" type="text/javascript">
+					<!--
+
+					var myData    = new Array();
+						myData[0] = "42%";
+						myData[1] = "41%";
+						myData[2] = "3";
+						myData[3] = "4";
+						myData[4] = "5";
+
+					document.write("<tr><td> &nbsp; Daily Percentage</td>");
+					document.write("<td>" + myData[0] + "</td></tr>");
+					document.write("<tr><td> &nbsp; Monthly Average Percentage</td>");
+					document.write("<td>" + myData[1] + "</td></tr>");
+
+					//-->
+					</script>
+					</table>
+			</div>
+			</div>
+</div>
+</body>
+</html>			

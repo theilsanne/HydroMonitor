@@ -2,7 +2,7 @@
 <widget xmlns		= "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
 	id		= "com.phonegap.getting.started"
-	version 	= "1.0.6">
+	version 	= "1.0.7">
 
 	<name>HydroMonitor</name>
 
@@ -22,7 +22,7 @@
 		<gap:platform name="blackberry" project="widgets"/>
 	</gap:platforms>
 	
-	<gap:splash src="splashes/splash.png" gap:role="default" />
+	<gap:splash src="themes/one/img/bigsplash.png" gap:role="default" />
 
 <!-- iOS requires specific dimensions for splash screens; classic iPhone screens, Retina 
 Screens, and iPad screen respectively -->

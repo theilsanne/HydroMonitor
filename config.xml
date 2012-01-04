@@ -22,7 +22,23 @@
 		<gap:platform name="blackberry" project="widgets"/>
 	</gap:platforms>
 
-	<icon src="hydromon-icon-hq.png" gap:role="default" />
+	<!-- if a single splash screen is specified the build will use it for 
+all builds. Currently, all platforms except ios use a single splash 
+screen -->
+    <gap:splash src="splashes/splash.png" />
+
+<!-- iOS requires specific dimensions for splash screens; classic iPhone screens, Retina 
+Screens, and iPad screen respectively -->
+    <gap:splash src="themes/one/img/massivesplash.png" width="1024" height="786" />
+    <gap:splash src="themes/one/img/bigsplash.png" width="786" height="1024" />
+    <gap:splash src="themes/one/img/bigsplash.png" width="786" height="1024" />
+    <gap:splash src="themes/one/img/bigsplash.png" width="786" height="1004" />
+	
+	<icon src="themes/one/img/hydromon-icon-small.png" gap:role="default" /> 
+	<icon src="themes/one/img/hydromon-icon-small.png" width="57" height="57" /> 
+    <icon src="themes/one/img/hydromon-icon-hq.png" width="114" height="114"/> 
+	
+	<preference name="fullscreen" value="true" />
 
 	<feature name="http://api.phonegap.com/1.0/geolocation"/>
 	<feature name="http://api.phonegap.com/1.0/network"/>

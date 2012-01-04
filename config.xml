@@ -21,10 +21,12 @@
 		<gap:platform name="symbian.wrt" />
 		<gap:platform name="blackberry" project="widgets"/>
 	</gap:platforms>
+	
+	<gap:splash src="splashes/splash.png" gap:role="default" />
 
 <!-- iOS requires specific dimensions for splash screens; classic iPhone screens, Retina 
 Screens, and iPad screen respectively -->
-    <gap:splash src="themes/one/img/massivesplash.png" width="1024" height="786" />
+    <gap:splash src="themes/one/img/bigsplash.png" width="1024" height="786" />
     <gap:splash src="themes/one/img/bigsplash.png" width="786" height="1024" />
     <gap:splash src="themes/one/img/bigsplash.png" width="786" height="1024" />
     <gap:splash src="themes/one/img/bigsplash.png" width="786" height="1004" />

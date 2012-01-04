@@ -1,7 +1,0 @@
-<h1>What is the MPS system?<h1>
-The MPS System is evolutionary technology built upon a proven scientific theory. It gives a new life to existing brick, masonry and concrete structures avoiding expensive reconstruction and allows a broad field of application in new concrete structures. Existing methods used by the building industry today can be characterised as temporary solutions to the water ingress problem for which there has been no apparent permanent solution until now.
-<br /><br />
-The MPS System can waterproof existing and new concrete, brick and masonry structures/basement walls through a complex low voltage positive/negative pulsating charge.
-Concrete, brick and masonry structures consist of a mass containing capillary formations. Water may penetrate structures in a multitude of ways, the simplest form of which is as a result of gravity. Water can also penetrate structures through capillary action, very much in the same manner as plants and trees receive and distribute water to smaller branches.
-<br /><br />
-The MPS system is utilised for transporting water encapsulated within the capillaries out of structures, as well as permanently preventing the penetration of water into structures. A control unit produces a low voltage electrical charge, which passed through electrodes in the form of probes or wires strategically placed within portion of the walls and/or floors which are wet.

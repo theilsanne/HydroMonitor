@@ -37,8 +37,6 @@ Screens, and iPad screen respectively -->
 	<icon src="themes/one/img/hydromon-icon-small.png" gap:role="default" /> 
 	<icon src="themes/one/img/hydromon-icon-small.png" width="57" height="57" /> 
     <icon src="themes/one/img/hydromon-icon-hq.png" width="114" height="114"/> 
-	
-	<preference name="fullscreen" value="true" />
 
 	<feature name="http://api.phonegap.com/1.0/geolocation"/>
 	<feature name="http://api.phonegap.com/1.0/network"/>

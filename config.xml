@@ -2,7 +2,7 @@
 <widget xmlns		= "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
 	id		= "com.phonegap.getting.started"
-	version 	= "1.0.7">
+	version 	= "1.0.8">
 
 	<name>HydroMonitor</name>
 
@@ -23,13 +23,6 @@
 	</gap:platforms>
 	
 	<gap:splash src="themes/one/img/bigsplash.png" gap:role="default" />
-
-<!-- iOS requires specific dimensions for splash screens; classic iPhone screens, Retina 
-Screens, and iPad screen respectively -->
-    <gap:splash src="themes/one/img/bigsplash.png" width="1024" height="786" />
-    <gap:splash src="themes/one/img/bigsplash.png" width="786" height="1024" />
-    <gap:splash src="themes/one/img/bigsplash.png" width="786" height="1024" />
-    <gap:splash src="themes/one/img/bigsplash.png" width="786" height="1004" />
 	
 	<icon src="themes/one/img/hydromon-icon.png" gap:role="default" /> 
 	

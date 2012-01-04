@@ -43,6 +43,39 @@
 		
 		<script type="text/javascript" src="scrolltopcontrol.js"></script>
 		
+<script type="text/javascript">
+function input()
+{
+var input=prompt("Please input your location","");
+jQuery(document).ready(function($) {
+	$.ajax({
+		url: "http://api.wunderground.com/api/ba2ef75c341eb4f6/geolookup/conditions/q/"+input+".json",
+		dataType: "jsonp",
+		success: function(parsed_json) {
+				var location = parsed_json['location']['city'];
+				var temp_c = parsed_json['current_observation']['temp_c'];
+				var temp_f = parsed_json['current_observation']['temp_f'];
+				var weather = parsed_json['current_observation']['weather'];
+				var icon_url= parsed_json['current_observation']['icon_url'];
+				var icon= parsed_json['current_observation']['icon'];
+				var humidity= parsed_json['current_observation']['relative_humidity'];
+				var precip= parsed_json['current_observation']['precip_today_metric'];
+				var wind= parsed_json['current_observation']['wind_string'];
+				
+				// it should be "document.getElementById"
+				document.getElementById("loc").innerHTML = location;
+				document.getElementById("temp").innerHTML = temp_c + "&deg;C / " + temp_f + "&deg;F";
+				//document.getElementById("weath").innerHTML = "<td style=\"background: url(" + icon_url + ") no-repeat; height: 50px; padding-left: 60px; padding-top: 15px;\">" + weather;
+				document.getElementById("weath").innerHTML = "<div style=\"background: url(" + icon_url + ") no-repeat; height: 50px; padding-left: 60px; padding-top: 15px;\"></div>" + weather;
+				document.getElementById("humid").innerHTML = humidity;
+				document.getElementById("precip").innerHTML = precip+ "mm";
+				document.getElementById("wind").innerHTML = wind;
+		}
+	});
+});
+}
+</script>
+
 <style type="text/css" media="all">
 #content {
 	background: none;
@@ -155,7 +188,18 @@ return false;
 				</div>
 			<div id="content">
 <div align="center">
-<iframe src="weather.html" style="width: 100%; height: 30%; border: 0;"><p>iframes Not Supported</p></iframe>
+<p id="text"></p>
+<input type="button" style="margin-left: auto; margin-right: auto; width: 14em;" class="bigButton" onclick="input()" value="Input Your Location" />
+<p>
+<table>
+<tr><td>Location:</td><td id="loc"></td></tr>
+<tr><td>Temperature:</td><td id="temp"></td></tr>
+<tr><td>Weather:</td><td id="weath"></td></tr>
+<tr><td>Relative Humidity:</td><td id="humid"></td></tr>
+<tr><td>Precipitation:</td><td id="precip"></td></tr>
+<tr><td>Wind:</td><td id="wind"></td></tr>
+</table>
+</p>
 <p>&nbsp;</p>
 <p><sub>Weather service provided by:</sub></p>
 <p><a href="" target="_blank"><img src="http://icons.wxug.com/logos/PNG/wundergroundLogo_black_horz.png" style="width: 90%;" alt="Weather from Weather Underground" /></a></p>
